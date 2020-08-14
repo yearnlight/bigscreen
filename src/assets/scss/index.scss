@@ -13,6 +13,10 @@
   }
 
   .host-body {
+    height: calc(100% - 2rem);
+    .jc-center{
+      height: 3.85rem;
+    }
     .title {
       position: relative;
       width: 500px;
@@ -23,14 +27,14 @@
       .title-text {
         font-size: 2rem;
         position: absolute;
-        bottom: 0px;
+        bottom: 20px;
         left: 50%;
         transform: translate(-50%);
       }
 
       .title-bototm {
         position: absolute;
-        bottom: -30px;
+        bottom: 0px;
         left: 50%;
         transform: translate(-50%);
       }
@@ -90,21 +94,52 @@
 
 
     .body-box {
+      height: calc(100% - 4.85rem);
       margin-top: 1rem;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
 
-      //下方区域的布局
-      .content-box {
-        display: grid;
-        grid-template-columns: 2fr 3fr 5fr 3fr 2fr;
+      .left{
+        // margin-right: 0.5rem;
+        flex:2;
+        display: flex;
+        flex-direction: column;
+        &-top{
+          flex:2;
+          height : 0;
+          // margin-bottom: 0.5rem;
+        }
+        &-bottom{
+          flex:1;
+        }
       }
 
-      // 底部数据
-      .bototm-box {
-        margin-top: 10px;
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
+      .center{
+        flex:3;
+        display: flex;
+        flex-direction: column;
+        &-top{
+          flex:2;
+          height : 0;
+        }
+        &-bottom{
+          flex:1;
+        }
+      }
+
+      .right{
+        flex:2;
+        display: flex;
+        flex-direction: column;
+        &-top{
+          flex:1;
+        }
+        &-mid{
+          flex:1;
+        }
+        &-bottom{
+          flex:1;
+        }
       }
     }
   }
