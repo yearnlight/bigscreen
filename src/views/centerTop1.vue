@@ -53,9 +53,9 @@ export default {
       return res.substring(0, res.length - 1);
     },
     setMapStyle({ BMap, map }) {
-      // let mapStyle = { style: "dark" };
-      map.setMapStyleV2({ styleJson: mapStyleBrown });
-      // map.setMapStyle(mapStyle);
+      let mapStyle = { style: "dark" };
+      // map.setMapStyleV2({ styleJson: mapStyleBrown });
+      map.setMapStyle(mapStyle);
     },
     mapReady({ BMap, map }) {
       this.map = map;
