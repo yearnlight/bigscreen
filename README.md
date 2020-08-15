@@ -4,6 +4,7 @@
 - 项目部分区域使用了全局注册方式，增加了打包体积，在实际运用中请使用**按需引入**。
 - 项目环境：vue-cli-3.0、webpack-4.0、npm-6.13、node-v12.16.
 
+![](https://github.com/yearnlight/bigscreen/blob/master/src/assets/ymx.png)
 友情链接：
 1.  [DataV 官方文档（建议使用之前先浏览）](http://datav.jiaminghi.com/guide/)
 2.  [echarts 实例](https://www.echartsjs.com/examples/zh/index.html)，[echarts 官方文档](https://www.echartsjs.com/zh/option.html#title)
