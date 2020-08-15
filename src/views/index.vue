@@ -37,7 +37,7 @@
           <div class="center">
             <div class="center-top">
               <dv-border-box-8>
-                <centerTop1 />
+                <centerTop />
               </dv-border-box-8>
             </div>
             <div class="center-bottom">
@@ -73,7 +73,7 @@
 <script>
 import leftTop from "./leftTop";
 import leftBottom from "./leftBottom";
-import centerTop1 from "./centerTop1";
+import centerTop from "./centerTop";
 import centerBottom from "./centerBottom";
 import rightTop from "./rightTop";
 import rightCenter from "./rightCenter";
@@ -87,7 +87,7 @@ export default {
   components: {
     leftBottom,
     leftTop,
-    centerTop1,
+    centerTop,
     centerBottom,
     rightTop,
     rightCenter,

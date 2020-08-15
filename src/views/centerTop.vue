@@ -1,6 +1,6 @@
 <template>
   <div class="map">
-    <v-chart :options="options" autoresize v-if="isShow" />
+    <v-chart :options="options" autoresize v-if="isShow"/>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
     this.isShow = true;
   },
   methods: {
-    render() {},
+    render() {}
   },
   data() {
     return {
@@ -30,16 +30,16 @@ export default {
             color: "#c3cbde",
             fontSize: 16,
             fontWeight: "normal",
-            fontFamily: "Avenir, Helvetica, Arial, sans-serif",
+            fontFamily: "Avenir, Helvetica, Arial, sans-serif"
           },
-          padding: 20,
+          padding: 20
         },
         tooltip: {
           trigger: "item",
-          formatter: "{b}<br/>{c} (p / km2)",
+          formatter: "{b}<br/>{c} (p / km2)"
         },
         visualMap: {
-          show: false,
+          show: false
         },
         bmap: {
           center: [109.34824, 37.357421],
@@ -51,132 +51,132 @@ export default {
                 featureType: "water",
                 elementType: "all",
                 stylers: {
-                  color: "#044161",
-                },
+                  color: "#044161"
+                }
               },
               {
                 featureType: "land",
                 elementType: "all",
                 stylers: {
-                  color: "#004981",
-                },
+                  color: "#004981"
+                }
               },
               {
                 featureType: "boundary",
                 elementType: "geometry",
                 stylers: {
-                  color: "#064f85",
-                },
+                  color: "#064f85"
+                }
               },
               {
                 featureType: "railway",
                 elementType: "all",
                 stylers: {
-                  visibility: "off",
-                },
+                  visibility: "off"
+                }
               },
               {
                 featureType: "highway",
                 elementType: "geometry",
                 stylers: {
-                  color: "#004981",
-                },
+                  color: "#004981"
+                }
               },
               {
                 featureType: "highway",
                 elementType: "geometry.fill",
                 stylers: {
                   color: "#005b96",
-                  lightness: 1,
-                },
+                  lightness: 1
+                }
               },
               {
                 featureType: "highway",
                 elementType: "labels",
                 stylers: {
-                  visibility: "off",
-                },
+                  visibility: "off"
+                }
               },
               {
                 featureType: "arterial",
                 elementType: "geometry",
                 stylers: {
-                  color: "#004981",
-                },
+                  color: "#004981"
+                }
               },
               {
                 featureType: "arterial",
                 elementType: "geometry.fill",
                 stylers: {
-                  color: "#00508b",
-                },
+                  color: "#00508b"
+                }
               },
               {
                 featureType: "poi",
                 elementType: "all",
                 stylers: {
-                  visibility: "off",
-                },
+                  visibility: "off"
+                }
               },
               {
                 featureType: "green",
                 elementType: "all",
                 stylers: {
                   color: "#056197",
-                  visibility: "off",
-                },
+                  visibility: "off"
+                }
               },
               {
                 featureType: "subway",
                 elementType: "all",
                 stylers: {
-                  visibility: "off",
-                },
+                  visibility: "off"
+                }
               },
               {
                 featureType: "manmade",
                 elementType: "all",
                 stylers: {
-                  visibility: "off",
-                },
+                  visibility: "off"
+                }
               },
               {
                 featureType: "local",
                 elementType: "all",
                 stylers: {
-                  visibility: "off",
-                },
+                  visibility: "off"
+                }
               },
               {
                 featureType: "arterial",
                 elementType: "labels",
                 stylers: {
-                  visibility: "off",
-                },
+                  visibility: "off"
+                }
               },
               {
                 featureType: "boundary",
                 elementType: "geometry.fill",
                 stylers: {
-                  color: "#029fd4",
-                },
+                  color: "#029fd4"
+                }
               },
               {
                 featureType: "building",
                 elementType: "all",
                 stylers: {
-                  color: "#1a5787",
-                },
+                  color: "#1a5787"
+                }
               },
               {
                 featureType: "label",
                 elementType: "all",
                 stylers: {
-                  visibility: "off",
-                },
-              },
-            ],
-          },
+                  visibility: "off"
+                }
+              }
+            ]
+          }
         },
         series: [
           {
@@ -184,13 +184,37 @@ export default {
             type: "map",
             mapType: "JingBian", // 自定义扩展图表类型
             label: {
-              show: true,
+              normal: {
+                show: true, //显示省份标签
+                textStyle: {
+                  color: "#ffdb5c"
+                } //省份标签字体颜色
+              },
+              emphasis: {
+                //对应的鼠标悬浮效果
+                show: false,
+                textStyle: {
+                  color: "#ffdb5c"
+                }
+              }
             },
-          },
-        ],
-      },
+            itemStyle: {
+              normal: {
+                borderWidth: 0.5, //区域边框宽度
+                borderColor: "#009fe8", //区域边框颜色
+                areaColor: "#83bff6" //区域颜色
+              },
+              emphasis: {
+                borderWidth: 0.5,
+                borderColor: "#4b0082",
+                areaColor: "#188df0"
+              }
+            }
+          }
+        ]
+      }
     };
-  },
+  }
 };
 </script>
 
