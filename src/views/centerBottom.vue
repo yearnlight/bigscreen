@@ -15,7 +15,6 @@ export default {
     render() {
       this.options.title.text = "环境监测曲线图";
       this.options.yAxis.name = "μg/m³";
-      this.options.legend.data.push(["PM2.5", "PM10"]);
       this.options.xAxis.data = [
         "2020-8-12",
         "2020-8-13",
@@ -52,17 +51,17 @@ export default {
         symbol: "none",
         sampling: "average",
         itemStyle: {
-          color: "#2a87be",
+          color: "#e0b66a",
         },
         areaStyle: {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
-              color: "rgb(62, 185, 226,0.5)",
+              color: "rgb(224, 182, 106, 0.5)",
             },
             {
               offset: 1,
-              color: "rgb(62, 185, 226,0.1)",
+              color: "rgb(224, 182, 106,0.1)",
             },
           ]),
         },
@@ -116,8 +115,11 @@ export default {
           },
         },
         legend: {
-          data: [],
-          top: 20,
+          data: ["PM2.5", "PM10"],
+          top: 30,
+          textStyle: {
+            color: "#ffffff",
+          },
         },
         tooltip: {
           trigger: "axis",

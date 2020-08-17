@@ -14,16 +14,19 @@ export default {
   methods: {
     render() {
       this.options.title.text = "卸料平台";
-      this.options.yAxis.name = "%";
+      this.options.yAxis.name = "Kg";
       this.options.legend.data.push(["电量"]);
       this.options.xAxis.data = [
         "2020-8-12",
         "2020-8-13",
         "2020-8-14",
         "2020-8-15",
+        "2020-8-16",
+        "2020-8-17",
+        "2020-8-18",
       ];
       this.options.series.push({
-        name: "电量",
+        name: "重量",
         type: "bar",
         barMaxWidth: 30,
         itemStyle: {
@@ -42,7 +45,7 @@ export default {
             ]),
           },
         },
-        data: [19, 2, 12, 38],
+        data: [23, 12, 27, 19, 19, 19, 9],
       });
     },
   },
@@ -92,8 +95,11 @@ export default {
           },
         },
         legend: {
-          data: [],
-          top: 20,
+          data: ["重量"],
+          top: 30,
+          textStyle: {
+            color: "#ffffff",
+          },
         },
         tooltip: {
           trigger: "axis",

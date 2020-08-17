@@ -23,7 +23,7 @@ export default {
         "2020-8-15",
       ];
       this.options.series.push({
-        name: "压强",
+        name: "电量",
         type: "bar",
         barMaxWidth: 30,
         itemStyle: {
@@ -98,8 +98,11 @@ export default {
           },
         },
         legend: {
-          data: [],
-          top: 0,
+          data: ["电量"],
+          top: 30,
+          textStyle: {
+            color: "#ffffff",
+          },
         },
         tooltip: {
           trigger: "axis",
@@ -137,5 +140,9 @@ export default {
 <style lang="scss">
 .bar {
   height: 100%;
+  .echarts {
+    height: 100%;
+    width: 100%;
+  }
 }
 </style>

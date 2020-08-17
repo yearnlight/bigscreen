@@ -2,7 +2,18 @@
   <div class="member">
     <div class="title">人员分布</div>
     <div class="content">
-      <dv-decoration-9 style="width:150px;height:150px;">66人</dv-decoration-9>
+      <div class="content-left">
+        <div class="content-left-label">
+          <dv-decoration-7 style="width:150px;height:30px;">注册人员</dv-decoration-7>
+        </div>
+        <dv-decoration-9 style="width:100px;height:100px;">66人</dv-decoration-9>
+      </div>
+      <div class="content-right">
+        <div class="content-left-label">
+          <dv-decoration-7 style="width:150px;height:30px;">进场人员</dv-decoration-7>
+        </div>
+        <dv-decoration-9 style="width:100px;height:100px;">48人</dv-decoration-9>
+      </div>
     </div>
   </div>
 </template>
@@ -20,9 +31,38 @@
   }
   .content {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex: 1;
+    &-left {
+      padding: 20px;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      &-label {
+        margin-bottom: 30px;
+        svg {
+          position: relative;
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      &-label {
+        margin-bottom: 30px;
+        svg {
+          position: relative;
+          width: auto;
+          height: auto;
+        }
+      }
+    }
   }
 }
 </style>

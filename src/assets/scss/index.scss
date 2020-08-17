@@ -135,9 +135,11 @@
         flex-direction: column;
         &-top{
           flex:1;
+          height : 0;
         }
         &-mid{
           flex:1;
+          height : 0;
         }
         &-bottom{
           flex:1;
